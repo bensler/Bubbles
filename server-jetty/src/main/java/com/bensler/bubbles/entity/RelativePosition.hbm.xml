@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.bensler.bubbles.entity">
+  <class name="RelativePosition" table="relative_position" >
+
+	  <id name="id_" column="id" access="field">
+	    <generator class="sequence">
+        <param name="sequence">relative_position_seq</param>
+     </generator>
+	  </id>
+
+    <property name="dx_" column="dx" access="field" />
+    <property name="dy_" column="dy" access="field" />
+ 
+    <many-to-one name="releatedEntity_"  class="Entity" column="aux_entity_id"    access="field" lazy="false" />
+ 
+  </class>
+</hibernate-mapping>

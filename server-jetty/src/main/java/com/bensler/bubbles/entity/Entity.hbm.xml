@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bensler.bubbles.entity">
+  <class name="Entity" table="entity" >
+
+    <id name="id_" column="id" access="field">
+      <generator class="sequence">
+        <param name="sequence">entity_seq</param>
+      </generator>
+    </id>
+    
+    <property name="name_"        column="name"         access="field" />
+    <property name="description_" column="description"  access="field" />
+
+  </class>
+</hibernate-mapping>
